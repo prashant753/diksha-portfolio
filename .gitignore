@@ -83,8 +83,6 @@ web_modules/
 .nuxt
 build
 /build
-/build-dev
-/build-prod
 
 # Gatsby files
 .cache/

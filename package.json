@@ -87,7 +87,7 @@
     "build:dev": "webpack --config webpack.config.dev.js",
     "build:prod": "webpack --config webpack.config.prod.js",
     "predeploy": "yarn run build:prod",
-    "deploy": "gh-pages -b master -d build-prod",
+    "deploy": "gh-pages -b main -d build-prod",
     "test": "jest -u --coverage",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"

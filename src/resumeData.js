@@ -68,6 +68,21 @@ let resumeData = {
   "portfolio": {
     "projects": [
       {
+        "title": "Graduation Show",
+        "category": "Fashion show",
+        "image": Image4,
+      },
+      {
+        "title": "Liva show 2015",
+        "category": "Fashion show",
+        "image": Image6,
+      },
+      {
+        "title": "Jharcraft Textile",
+        "category": "Fashion show",
+        "image": Image5,
+      },
+      {
         "title": "Anastasia Autumn",
         "category": "Fashion show",
         "image": Image1,
@@ -78,29 +93,14 @@ let resumeData = {
         "image": Image2,
       },
       {
-        "title": "Festive Fusion",
-        "category": "Fashion show",
-        "image": Image3,
-      },
-      {
-        "title": "Graduation Show",
-        "category": "Fashion show",
-        "image": Image4,
-      },
-      {
-        "title": "Jharcraft Textile",
-        "category": "Fashion show",
-        "image": Image5,
-      },
-      {
-        "title": "Liva show 2015",
-        "category": "Fashion show",
-        "image": Image6,
-      },
-      {
         "title": "Orient express spring summer 2020",
         "category": "Fashion show",
         "image": Image7,
+      },
+      {
+        "title": "Festive Fusion",
+        "category": "Fashion show",
+        "image": Image3,
       },
     ]
   },
