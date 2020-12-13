@@ -10,13 +10,12 @@ export default class Porfolio extends Component {
             <div id="portfolio-wrapper" className="bgrid-quarters s-bgrid-thirds cf">
               {
                 resumeData.portfolio && resumeData.portfolio.projects.map((item) => {
-                  const projectImage = 'images/' + item.image;
-                  const imageClicked = () => window.open(`${projectImage}`, '_blank')
+                  const imageClicked = () => window.open(`${item.image}`, '_blank')
                   return (
                     <div onClick={imageClicked} className="columns portfolio-item">
                       <div className="item-wrap">
                         <div>
-                          <img src={`${projectImage}`} className="item-img" />
+                          <img src={`${item.image}`} className="item-img" />
                           <div className="overlay">
                             <div className="portfolio-item-meta">
                               <h5>{item.name}</h5>

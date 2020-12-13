@@ -4,7 +4,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin');
 
 const __APP_PUBLIC_PATH__ = process.env.APP_PUBLIC_PATH;
 module.exports = {
@@ -21,17 +21,23 @@ module.exports = {
     },
     optimization: {
         minimizer: [
-            // we specify a custom UglifyJsPlugin here to get source maps in production
-            new UglifyJsPlugin({
-                cache: true,
-                parallel: true,
-                uglifyOptions: {
-                    compress: false,
-                    ecma: 6,
-                    mangle: true
+            new TerserPlugin({
+                terserOptions: {
+                  warnings: false,
+                  compress: {
+                    comparisons: false,
+                  },
+                  parse: {},
+                  mangle: true,
+                  output: {
+                    comments: false,
+                    ascii_only: true,
+                  },
                 },
-                sourceMap: true
-            })
+                parallel: true,
+                cache: true,
+                sourceMap: true,
+              }),
         ]
     },  
     module: {
@@ -116,11 +122,5 @@ module.exports = {
             debug: false
         }),
         new webpack.HashedModuleIdsPlugin(),
-        new webpack.optimize.ModuleConcatenationPlugin(),
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'static',
-            openAnalyzer: false,
-            reportFilename: 'bundle-analysis.html'
-        })
     ]
 };

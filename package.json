@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@types/axios": "^0.14.0",
     "@types/react": "^16.9.31",
     "@types/react-dom": "^16.9.6",
@@ -22,20 +23,20 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-hot-middleware": "^2.25.0"
   },
-  "name": "prashant-portfolio",
+  "name": "diksha-portfolio",
   "description": "",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "www.prashantadhikari.ml",
+  "homepage": "www.dikshasingh.tk",
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
     "@babel/plugin-external-helpers": "^7.8.3",
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@babel/preset-react": "^7.9.4",
-    "@babel/preset-typescript": "^7.9.0",
+    "@babel/preset-env": "^7.12.10",
+    "@babel/preset-react": "^7.12.10",
+    "@babel/preset-typescript": "^7.12.7",
     "@types/enzyme": "^3.10.5",
     "@types/enzyme-adapter-react-16": "^1.0.6",
     "@types/express": "^4.17.4",
@@ -75,7 +76,8 @@
     "webpack": "^4.42.1",
     "webpack-bundle-analyzer": "^3.6.1",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.10.3"
+    "webpack-dev-server": "^3.10.3",
+    "terser-webpack-plugin": "1.2.3"
   },
   "scripts": {
     "analyze": "source-map-explorer 'build/js/*.js'",
